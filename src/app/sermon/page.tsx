@@ -53,15 +53,15 @@ export default async function Blog() {
                         </dd>
                         <dt className="sr-only">Author</dt>
                         <dd className="mt-6 flex gap-x-4">
-                          {/* <div className="flex-none overflow-hidden rounded-xl bg-neutral-100">
-                            <Image
+                          <div className="flex-none overflow-hidden rounded-xl bg-neutral-100">
+                            <img
                               alt=""
                               src={`https://i.ytimg.com/vi/${article.link}/hqdefault.jpg`}
                               width={270}
                               height={150}
-                              className="h-12 w-12 object-cover grayscale"
+                              className="object-cover grayscale"
                             />
-                          </div> */}
+                          </div>
                         </dd>
                       </dl>
                       <p className="mt-6 max-w-2xl text-base text-neutral-600">
