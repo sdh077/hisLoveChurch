@@ -192,7 +192,7 @@ export default async function About() {
       <PageIntro eyebrow="About us" title="Our strength is collaboration">
         <p>
           We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          puts our clients at the center of everything we do.ad
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
