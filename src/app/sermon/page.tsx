@@ -9,7 +9,6 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { formatDate } from '@/lib/formatDate'
-import { loadArticles } from '@/lib/mdx'
 import { supabase } from '@/lib/api'
 
 export const metadata: Metadata = {
@@ -34,7 +33,7 @@ export default async function Blog() {
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         <div className="space-y-24 lg:space-y-32">
-          {data.map((article) => (
+          {data && data.map((article) => (
             <FadeIn key={article.id}>
               <article>
                 <Border className="pt-16">

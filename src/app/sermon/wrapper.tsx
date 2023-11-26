@@ -5,7 +5,7 @@ import { MDXComponents } from '@/components/MDXComponents'
 import { PageLinks } from '@/components/PageLinks'
 import { supabase } from '@/lib/api'
 import { formatDate } from '@/lib/formatDate'
-import { type Article, type MDXEntry, loadArticles } from '@/lib/mdx'
+import { type Article, type MDXEntry } from '@/lib/mdx'
 import { useParams } from 'next/navigation'
 
 const getData = async () => {
@@ -20,10 +20,6 @@ export default async function BlogArticleWrapper({
   article: MDXEntry<Article>
   children: React.ReactNode,
 }) {
-  let allArticles = await loadArticles()
-  let moreArticles = allArticles
-    .filter(({ metadata }) => metadata !== article)
-    .slice(0, 2)
   const { data, error } = await getData();
 
   return (
@@ -47,19 +43,19 @@ export default async function BlogArticleWrapper({
         </FadeIn>
 
         <FadeIn>
-          {/* <MDXComponents.wrapper className="mt-24 sm:mt-32 lg:mt-40">
+          <MDXComponents.wrapper className="mt-24 sm:mt-32 lg:mt-40">
             {children}
-          </MDXComponents.wrapper> */}
+          </MDXComponents.wrapper>
         </FadeIn>
       </Container>
 
-      {moreArticles.length > 0 && (
+      {/* {moreArticles.length > 0 && (
         <PageLinks
           className="mt-24 sm:mt-32 lg:mt-40"
           title="More articles"
           pages={moreArticles}
         />
-      )}
+      )} */}
 
       <ContactSection />
     </>

@@ -14,7 +14,7 @@ function BlockquoteWithImage({
   author: { name: string; role: string }
   children: React.ReactNode
   className?: string
-  image?: ImagePropsWithOptionalAlt
+  image: ImagePropsWithOptionalAlt
 }) {
   return (
     <figure
@@ -74,7 +74,7 @@ export function Blockquote(
       image?: undefined
     }),
 ) {
-  if (!!props.image) {
+  if (props.image) {
     return <BlockquoteWithImage {...props} />
   }
 
