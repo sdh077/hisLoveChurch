@@ -82,6 +82,7 @@ function CaseStudies({
                     <Blockquote
                       author={caseStudy.testimonial.author}
                       className="mt-12"
+                      image={null}
                     >
                       {caseStudy.testimonial.content}
                     </Blockquote>

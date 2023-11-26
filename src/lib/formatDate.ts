@@ -3,7 +3,7 @@ export function formatDate(dateString: string) {
   let hasDay = parts.length > 2
 
   return new Date(`${parts.length > 1 ? parts[0] : dateString}Z`).toLocaleDateString('ko-KR', {
-    day: hasDay ? 'numeric' : undefined,
+    day: 'numeric',
     month: 'long',
     year: 'numeric',
     timeZone: 'UTC',

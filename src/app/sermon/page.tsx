@@ -19,7 +19,6 @@ export const metadata: Metadata = {
 }
 const getData = async () => {
   return await supabase.from('archive').select()
-
 }
 export default async function Blog() {
   const { data, error } = await getData()
@@ -42,7 +41,7 @@ export default async function Blog() {
                   <div className="relative lg:-mx-4 lg:flex lg:justify-end">
                     <div className="pt-10 lg:w-2/3 lg:flex-none lg:px-4 lg:pt-0">
                       <h2 className="font-display text-2xl font-semibold text-neutral-950">
-                        <Link href={`https://www.youtube.com/watch?v=${article.link}`}>{article.title}</Link>
+                        <Link href={`/sermon/${article.id}`}>{article.title}</Link>
                       </h2>
                       <dl className="lg:absolute lg:left-0 lg:top-0 lg:w-1/3 lg:px-4">
                         <dt className="sr-only">Published</dt>
@@ -53,13 +52,11 @@ export default async function Blog() {
                         </dd>
                         <dt className="sr-only">Author</dt>
                         <dd className="mt-6 flex gap-x-4">
-                          <div className="flex-none overflow-hidden rounded-xl bg-neutral-100">
+                          <div className="overflow-hidden rounded-xl bg-neutral-100">
                             <img
                               alt=""
                               src={`https://i.ytimg.com/vi/${article.link}/hqdefault.jpg`}
-                              width={270}
-                              height={150}
-                              className="object-cover grayscale"
+                              className="object-cover grayscale sm:w-full lg:w-64"
                             />
                           </div>
                         </dd>
@@ -68,11 +65,18 @@ export default async function Blog() {
                         {article.description}
                       </p>
                       <Button
-                        href={article.href}
+                        href={`/sermon/${article.id}`}
+                        aria-label={`Read more: ${article.title}`}
+                        className="mt-8 mr-2"
+                      >
+                        자세히 보기
+                      </Button>
+                      <Button
+                        href={`https://www.youtube.com/watch?v=${article.link}`}
                         aria-label={`Read more: ${article.title}`}
                         className="mt-8"
                       >
-                        Read more
+                        youtube 방문
                       </Button>
                     </div>
                   </div>
