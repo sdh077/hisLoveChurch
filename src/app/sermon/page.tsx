@@ -55,7 +55,7 @@ export default async function Blog() {
                             <img
                               alt=""
                               src={`https://i.ytimg.com/vi/${article.link}/hqdefault.jpg`}
-                              className="object-cover grayscale sm:w-full lg:w-64"
+                              className="object-cover  sm:w-full lg:w-64"
                             />
                           </div>
                         </dd>
