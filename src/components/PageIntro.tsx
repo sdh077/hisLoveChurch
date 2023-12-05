@@ -5,12 +5,14 @@ import { FadeIn } from '@/components/FadeIn'
 import { Button } from './Button'
 
 export function PageIntro({
+  eyebrow,
   title,
   children,
   centered = false,
   ppt,
   paper
 }: {
+  eyebrow?: string
   title: string
   children: React.ReactNode
   ppt?: string
