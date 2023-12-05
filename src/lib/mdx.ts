@@ -61,5 +61,5 @@ export interface CaseStudy {
 // }
 
 export function loadCaseStudies() {
-  return loadEntries<CaseStudy>('work', 'caseStudy')
+  return loadEntries<CaseStudy>('article', 'caseStudy')
 }
