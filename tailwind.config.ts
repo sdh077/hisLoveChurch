@@ -27,6 +27,8 @@ export default {
           ['Mona Sans', ...defaultTheme.fontFamily.sans],
           { fontVariationSettings: '"wdth" 125' },
         ],
+        nanum: ['NanumSquareNeo-Variable'],
+        ridi: ['RIDIBatang'],
       },
     },
   },
