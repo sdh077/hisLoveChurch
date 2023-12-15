@@ -49,7 +49,7 @@ function Article({
                       width={150}
                       height={80}
                       alt=""
-                      className="h-32 w-64 flex-none"
+                      className="h-32 w-64 flex-none rounded-xl"
                       unoptimized
                     />
                   </div>

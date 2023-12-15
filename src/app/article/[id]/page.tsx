@@ -16,6 +16,7 @@ export default function page({ params: { id } }: { params: { id: number } }) {
                         width={1000}
                         height={800}
                         alt=""
+                        style={{ borderTopLeftRadius: '40px', borderTopRightRadius: '40px' }}
                         className="h-full w-full flex-none my-16"
                         unoptimized
                     />
