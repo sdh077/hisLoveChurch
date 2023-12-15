@@ -27,7 +27,7 @@ export default function App() {
         modules={[Scrollbar]}
         className="mySwiper mt-10"
       >
-        <SwiperSlide><Image src={SwiperImage1} alt=''></Image></SwiperSlide>
+        <SwiperSlide><Image src={SwiperImage1} alt='' fill={false}></Image></SwiperSlide>
         <SwiperSlide><Image src={SwiperImage2} alt=''></Image></SwiperSlide>
         <SwiperSlide>Slide 3</SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>
