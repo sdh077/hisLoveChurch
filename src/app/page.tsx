@@ -49,7 +49,7 @@ function Clients() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h1 className="text-center font-nanum font-display text-lg font-semibold tracking-wider text-white sm:text-left">
-            예배시간 안내
+            주일예배 안내
           </h1>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -58,9 +58,9 @@ function Clients() {
             role="list"
             className="mt-10 grid grid-cols gap-x-8 gap-y-10 lg:grid-cols-3"
           >
-            <li><p className="text-sm font-nanum text-white">주일 11:00 - 11:30</p> <p className='text-md font-nanum font-bold text-white'>성도 간 교제</p></li>
-            <li><p className="text-sm font-nanum text-white">주일 11:30 - 13:30</p> <p className='text-md font-nanum font-bold text-white'>찬양 및 예배</p></li>
-            <li><p className="text-sm font-nanum text-white">주일 13:30 -</p> <p className='text-md font-nanum font-bold text-white'>점심 및 소그룹</p></li>
+            <li><p className="text-sm font-nanum text-white">11:00 - 11:30</p> <p className='text-md font-nanum font-bold text-white'>성도 간 교제</p></li>
+            <li><p className="text-sm font-nanum text-white">11:30 - 13:30</p> <p className='text-md font-nanum font-bold text-white'>찬양 및 예배</p></li>
+            <li><p className="text-sm font-nanum text-white">13:30 -</p> <p className='text-md font-nanum font-bold text-white'>점심 및 소그룹</p></li>
           </ul>
         </FadeInStagger>
         
@@ -98,21 +98,25 @@ function Example() {
                 <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
               </svg>
               <blockquote className="text-lg font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-                <p className='text-sm font-nanum'>
-                  성도 한 사람 한 사람의 삶이 하나님 앞에서 가장 아름답게 열매맺는 일을 목적으로 살아가고 있다. 
+                <p className='text-sm font-nanum mb-1 break-words'>
+                  성도 한 사람 한 사람의 삶이 하나님 앞에서 가장 아름답게 열매맺는 일을 목적으로 살아가고 있습니다.
                 </p>
-                <p className='text-sm font-nanum'>
-                  예수님을 믿었지만, 목회가 무엇인지 잘 모르고 방황하는 시절에 사랑의교회 고 옥한흠 목사를 통해 목회적 회심을 경험했고 한 영혼을 위해 목숨을 거는 제자훈련 목회를 철학으로 삼고 있다. 
+                <p className='text-sm font-nanum mb-1 break-words'>
+                  예수님을 믿었지만, 목회가 무엇인지 잘 모르고 방황하는 시절에 사랑의교회 故 옥한흠 목사님을 통해 목회적 회심을 경험했고 한 영혼을 위해 목숨을 거는 제자훈련 목회를 철학으로 삼고 있습니다. 
                 </p>
-                <p className='text-sm font-nanum'>
-                  또 오늘날 문화에 맞는 복음을 전하기를 꿈꾸며 리디머 교회 팀 켈러 목사를 통해 복음의 가치를 재발견하여 복음과 제자훈련을 접목하여 복음적 훈련 공동체를 추구하고 있다.
+                <p className='text-sm font-nanum mb-1 break-words'>
+                  또 오늘날 문화에 맞는 복음을 전하기를 꿈꾸며 리디머교회 팀 켈러 목사를 통해 복음의 가치를 재발견하고 복음과 제자훈련을 접목함으로써 복음적 훈련 공동체를 추구하고 있습니다.
                 </p>
 
               </blockquote>
               <figcaption className="mt-8 text-base">
-                <div className="font-ridi font-semibold text-white">고상섭</div>
-                <div className="font-ridi mt-1 text-gray-400">그사랑교회 담임목사</div>
+                <span className="font-ridi font-semibold text-white">고상섭</span><span className="ml-2 font-ridi mt-1 text-gray-400">그 사랑교회 담임목사</span>
               </figcaption>
+              <ul className='ml-3 font-nanum text-xs text-gray-400 lg:text-sm'>
+                <li>영남신학대학교 및 합동신학대학원 졸업</li>
+                <li>사랑의교회 국제제자훈련원 교육자료개발 및 청년부 담당</li>
+                <li>CTCKorea 이사</li>
+              </ul>
             </figure>
           </div>
         </div>
@@ -147,6 +151,14 @@ function Photos() {
         ))}
       </div>
     </div>
+  )
+}
+
+function HowToCome() {
+  return (
+    <>
+     <div>오시는 길</div>
+    </>
   )
 }
 
@@ -284,16 +296,20 @@ export default async function Home() {
   return (
     <>
       {/* <Slide /> */}
-      <Container className="mt-20">
-        <div className="max-w-2xl">
-          <h1 className="font-ridi text-4xl break-words font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            그사랑교회에 오신 것을 환영합니다
+      <Container className="mt-10">
+        <div className="max-w-4xl">
+          <h1 className="font-ridi text-4xl break-words font-bold tracking-tight text-zinc-800 sm:text-5xl">
+            그 사랑교회에 오신 것을 환영합니다
           </h1>
-          <p className="font-nanum mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Gospel Changes Everything     
+          <p className="font-nanum mt-6 text-base text-zinc-600">
+          Gospel Changes Everything 복음을 모든 것을 변화시킵니다     
           </p>
-          <p className="font-nanum mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            복음을 모든 것을 변화시킵니다     
+
+          <p className="font-nanum mt-6 text-base text-zinc-600">
+            궁휼이 풍성하신 하나님이 우리를 사랑하신 <span className='text-red-800'>그 큰 사랑</span>을 인하여 허물로 죽은 우리를 그리스도와 함께 살리셨고 (너희는 은혜로 구원을 받은 것이라)(에베소서 2장 4-5절)
+          </p>
+          <p className="font-nanum mt-6 text-base text-zinc-600">
+            But God, who is rich in mercy, for <span className='text-red-800'>his great love</span> wherewith he loved us, even when we were dead in sins, hath quickened us together with Christ, (by grace ye are saved;) (Epistle to the Ephesians 2:4-5)
           </p>
           {/* <div className="mt-6 flex gap-6">
             <SocialLink
@@ -328,7 +344,7 @@ export default async function Home() {
 
       <Example />
       
-      <CaseStudies caseStudies={caseStudies} />
+      {/* <CaseStudies caseStudies={caseStudies} /> */}
 
       {/* <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
@@ -341,7 +357,9 @@ export default async function Home() {
 
       <Services />
 
-      <ContactSection />
+      <HowToCome />
+
+      {/* <ContactSection /> */}
     </>
   )
 }

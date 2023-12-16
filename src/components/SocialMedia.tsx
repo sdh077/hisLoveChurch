@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import clsx from 'clsx'
 
+import youtube_logo from '@/images/yt_logo_mono_dark.png'
+
 function FacebookIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -12,6 +14,7 @@ function FacebookIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
     </svg>
   )
 }
+
 
 function InstagramIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -57,12 +60,22 @@ function DribbbleIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+function YoutubeIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" viewBox="0 0 576 512" aria-hidden="true" {...props}>
+      <path opacity="1" fill="#ffffff" d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg>
+  )
+}
+
+
+
 export const socialMediaProfiles = [
-  { title: 'Facebook', href: 'https://facebook.com', icon: FacebookIcon },
-  { title: 'Instagram', href: 'https://instagram.com', icon: InstagramIcon },
-  { title: 'Twitter', href: 'https://twitter.com', icon: TwitterIcon },
-  { title: 'GitHub', href: 'https://github.com', icon: GitHubIcon },
-  { title: 'Dribbble', href: 'https://dribbble.com', icon: DribbbleIcon },
+  // { title: 'Facebook', href: 'https://facebook.com', icon: FacebookIcon },
+  // { title: 'Instagram', href: 'https://instagram.com', icon: InstagramIcon },
+  // { title: 'Twitter', href: 'https://twitter.com', icon: TwitterIcon },
+  // { title: 'GitHub', href: 'https://github.com', icon: GitHubIcon },
+  // { title: 'Dribbble', href: 'https://dribbble.com', icon: DribbbleIcon },
+  { title: 'YouTube', href: 'https://youtube.com/@user-fh6mi5ll7k?si=qOU99mqWH2FPk4Ds', icon: YoutubeIcon}
 ]
 
 export function SocialMedia({

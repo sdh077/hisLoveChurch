@@ -56,9 +56,9 @@ export function Logo({
       className={clsx(fillOnHover && 'group/logo', className)}
     >
       <div
-        className={invert ? 'text-white' : 'text-neutral-950'}
+        className={invert ? 'text-white font-ridi' : 'text-neutral-950 font-ridi'}
       >
-        His Church
+        His Great Love Church
       </div>
     </div>
   )
