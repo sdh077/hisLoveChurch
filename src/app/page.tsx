@@ -174,9 +174,9 @@ function HowToCome() {
             <Link href='https://naver.me/xb7spGZM' target='_blank' className='mx-2 font-nanum'><Button>네이버맵</Button></Link>
             <Link href='https://kko.to/obXkaUg9rL' target='_blank' className='mx-2 font-nanum'><Button>카카오맵</Button></Link>
           </GridListItem>
-          <GridListItem title="문의">
+          {/* <GridListItem title="문의">
             ssgo1973@gmail.com
-          </GridListItem>
+          </GridListItem> */}
         </GridList>
         <NaverMap />
       </Container>
@@ -366,7 +366,10 @@ export default async function Home() {
 
       <Photos />
 
-      <Clients />
+
+      {/* 목사님 소개 */}
+      <Example />
+
 
       {/* <Words /> */}
 
@@ -385,10 +388,11 @@ export default async function Home() {
 
       <Services />
 
-      {/* 목사님 소개 */}
-      <Example />
-
       <HowToCome />
+
+      {/* 예배 시간 */}
+      <Clients />
+
 
       {/* <ContactSection /> */}
     </>
