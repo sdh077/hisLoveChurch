@@ -17,10 +17,12 @@ export default function page({ params: { id } }: { params: { id: number } }) {
                         height={800}
                         alt=""
                         style={{ borderTopLeftRadius: '40px', borderTopRightRadius: '40px' }}
-                        className="h-full w-full flex-none my-16"
+                        className="h-full w-full flex-none my-10"
                         unoptimized
                     />
-                    <div dangerouslySetInnerHTML={{ __html: article.content }}></div>
+                    <div className='font-nanum text-xs' dangerouslySetInnerHTML={{ __html: article.date }}></div>
+                    <div className='font-ridi text-slate-950 text-4xl mt-2 mb-7' dangerouslySetInnerHTML={{ __html: article.title }}></div>
+                    <div className='font-nanum break-all' dangerouslySetInnerHTML={{ __html: article.content }}></div>
                 </div>
                 <div className='flex justify-between flex-row-reverse'>
                     {articles.length - 1 > id && <Link href={`/article/${Number(id ?? 0) + 1}`}><Button>다음</Button></Link>}
