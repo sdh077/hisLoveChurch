@@ -160,14 +160,19 @@ function Photos() {
 function HowToCome() {
   return (
     <>
-      <Container className='mt-32'>
+      <SectionIntro
+        title="오시는 길"
+        className="mt-24 sm:mt-32 lg:mt-40"
+      >
+      </SectionIntro>
+      <Container className='mt-5'>
         <GridList className='my-4'>
-          <GridListItem title="주소">
-            서울 강남구 영동대로 229 6층 D.LAB 어학원 <br />(자연드림 대치점 6층)
+          <GridListItem className='font-nanum' title="주소">
+            서울 강남구 영동대로 229 6층 D.LAB
           </GridListItem>
-          <GridListItem title="지도 이동">
-            <Link href='https://naver.me/xb7spGZM' target='_blank' className='mx-2'><Button>네이버맵</Button></Link>
-            <Link href='https://kko.to/obXkaUg9rL' target='_blank' className='mx-2'><Button>카카오맵</Button></Link>
+          <GridListItem className='font-nanum' title="지도 이동">
+            <Link href='https://naver.me/xb7spGZM' target='_blank' className='mx-2 font-nanum'><Button>네이버맵</Button></Link>
+            <Link href='https://kko.to/obXkaUg9rL' target='_blank' className='mx-2 font-nanum'><Button>카카오맵</Button></Link>
           </GridListItem>
           <GridListItem title="문의">
             ssgo1973@gmail.com

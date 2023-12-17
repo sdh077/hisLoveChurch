@@ -12,7 +12,7 @@ import { formatDate } from '@/lib/formatDate'
 import { supabase } from '@/lib/api'
 import Pagination from './pagination'
 
-const pageSize = 10
+const pageSize = 1
 export const metadata: Metadata = {
   title: 'Blog',
   description:
