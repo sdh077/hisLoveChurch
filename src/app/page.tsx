@@ -74,8 +74,8 @@ function Clients() {
 
 function Example() {
   return (
-    <div className="bg-white pb-16 pt-24 sm:pb-24 sm:pt-32 xl:pb-32">
-      <div className="bg-gray-900 pb-20 sm:pb-24 xl:pb-0">
+    <div className="bg-white pb-16 pt-32 mt-32 sm:pb-24 sm:pt-32 xl:pb-32">
+      <div className="bg-neutral-950 pb-20 sm:pb-24 xl:pb-0">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
           <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
             <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
@@ -166,7 +166,7 @@ function HowToCome() {
       >
       </SectionIntro>
       <Container className='mt-5'>
-        <GridList className='my-4'>
+        <GridList className='my-4 gap-3'>
           <GridListItem className='font-nanum' title="주소">
             서울 강남구 영동대로 229 6층 D.LAB
           </GridListItem>
@@ -364,7 +364,7 @@ export default async function Home() {
 
       {/* <Words /> */}
 
-      <Example />
+
 
       {/* <CaseStudies caseStudies={caseStudies} /> */}
 
@@ -378,6 +378,9 @@ export default async function Home() {
       </Testimonial> */}
 
       <Services />
+
+      {/* 목사님 소개 */}
+      <Example />
 
       <HowToCome />
 
