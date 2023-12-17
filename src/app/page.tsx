@@ -101,13 +101,13 @@ function Example() {
                 <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
               </svg>
               <blockquote className="text-lg font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-                <p className='text-sm font-nanum mb-1 break-words'>
+                <p className='text-sm font-nanum mb-1 break-all'>
                   성도 한 사람 한 사람의 삶이 하나님 앞에서 가장 아름답게 열매맺는 일을 목적으로 살아가고 있습니다.
                 </p>
-                <p className='text-sm font-nanum mb-1 break-words'>
+                <p className='text-sm font-nanum mb-1 break-all'>
                   예수님을 믿었지만, 목회가 무엇인지 잘 모르고 방황하는 시절에 사랑의교회 故 옥한흠 목사님을 통해 목회적 회심을 경험했고 한 영혼을 위해 목숨을 거는 제자훈련 목회를 철학으로 삼고 있습니다.
                 </p>
-                <p className='text-sm font-nanum mb-1 break-words'>
+                <p className='text-sm font-nanum mb-1 break-all'>
                   또 오늘날 문화에 맞는 복음을 전하기를 꿈꾸며 리디머교회 팀 켈러 목사를 통해 복음의 가치를 재발견하고 복음과 제자훈련을 접목함으로써 복음적 훈련 공동체를 추구하고 있습니다.
                 </p>
 
@@ -166,8 +166,8 @@ function HowToCome() {
             서울 강남구 영동대로 229 6층 D.LAB 어학원 <br />(자연드림 대치점 6층)
           </GridListItem>
           <GridListItem title="지도 이동">
-            <Link href={'https://naver.me/xb7spGZM'} target='_blank' className='mx-2'><Button>네이버맵</Button></Link>
-            <Link href={'https://kko.to/obXkaUg9rL'} target='_blank' className='mx-2'><Button>카카오맵</Button></Link>
+            <Link href='https://naver.me/xb7spGZM' target='_blank' className='mx-2'><Button>네이버맵</Button></Link>
+            <Link href='https://kko.to/obXkaUg9rL' target='_blank' className='mx-2'><Button>카카오맵</Button></Link>
           </GridListItem>
           <GridListItem title="문의">
             ssgo1973@gmail.com
@@ -315,7 +315,7 @@ export default async function Home() {
       {/* <Slide /> */}
       <Container className="mt-10">
         <div className="max-w-4xl">
-          <h1 className="font-ridi text-4xl break-words font-bold tracking-tight text-zinc-800 sm:text-5xl">
+          <h1 className="font-ridi text-4xl break-keep font-bold tracking-tight text-zinc-800 sm:text-5xl">
             그 사랑교회에 오신 것을 환영합니다
           </h1>
           <p className="font-nanum mt-6 text-base text-zinc-600">
