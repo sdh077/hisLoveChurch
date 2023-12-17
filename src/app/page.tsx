@@ -80,7 +80,7 @@ function Example() {
           <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
             <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
               <img
-                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl object-[0_-65px] lg:object-[0_0]"
+                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl object-[0_-74px] lg:object-[0_0]"
                 src="/kosangsub4.png"
                 alt=""
               />
@@ -284,7 +284,7 @@ function Services() {
               />
             </FadeIn>
           </div>
-          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
+          <List className="text-md mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="예배,전도">
               사람들을 하나님께 연결
             </ListItem>
@@ -320,19 +320,25 @@ export default async function Home() {
       {/* <Slide /> */}
       <Container className="mt-10">
         <div className="max-w-4xl">
-          <h1 className="font-ridi text-4xl break-keep font-bold tracking-tight text-zinc-800 sm:text-5xl">
+          <h1 className="mb-10 font-ridi text-4xl break-keep font-bold tracking-tight text-zinc-800 sm:text-5xl">
             그 사랑교회에 오신 것을 환영합니다
           </h1>
-          <p className="font-nanum mt-6 text-base text-zinc-600">
-            Gospel Changes Everything 복음을 모든 것을 변화시킵니다
-          </p>
 
           <p className="font-nanum mt-6 text-base text-zinc-600">
-            궁휼이 풍성하신 하나님이 우리를 사랑하신 <span className='text-red-800'>그 큰 사랑</span>을 인하여 허물로 죽은 우리를 그리스도와 함께 살리셨고 (너희는 은혜로 구원을 받은 것이라)(에베소서 2장 4-5절)
+            궁휼이 풍성하신 하나님이 우리를 사랑하신 <span className=' text-red-700'>그 큰 사랑</span>을 인하여 허물로 죽은 우리를 그리스도와 함께 살리셨고 (너희는 은혜로 구원을 받은 것이라)(에베소서 2장 4-5절)
           </p>
           <p className="font-nanum mt-6 text-base text-zinc-600">
-            But God, who is rich in mercy, for <span className='text-red-800'>his great love</span> wherewith he loved us, even when we were dead in sins, hath quickened us together with Christ, (by grace ye are saved;) (Epistle to the Ephesians 2:4-5)
+            But God, who is rich in mercy, for <span className='text-red-700'>his great love</span> wherewith he loved us, even when we were dead in sins, hath quickened us together with Christ, (by grace ye are saved;) (Epistle to the Ephesians 2:4-5)
           </p>
+
+          <p className="font-nanum mt-6 text-xl text-zinc-700">
+            복음을 모든 것을 변화시킵니다
+          </p>
+          {/* 
+          <p className="font-nanum mt-6 text-base text-zinc-600">
+            Gospel Changes Everything
+          </p> */}
+
           {/* <div className="mt-6 flex gap-6">
             <SocialLink
               href="https://twitter.com"
