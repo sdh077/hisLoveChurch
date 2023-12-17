@@ -63,7 +63,7 @@ function Clients() {
             <li><p className="text-sm font-nanum text-white">13:30 -</p> <p className='text-md font-nanum font-bold text-white'>점심 및 소그룹</p></li>
           </ul>
         </FadeInStagger>
-        
+
       </Container>
     </div>
   )
@@ -77,7 +77,7 @@ function Example() {
           <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
             <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
               <img
-                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
+                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl object-[0_-50px] lg:object-[0_0]"
                 src="/kosangsub4.png"
                 alt=""
               />
@@ -102,7 +102,7 @@ function Example() {
                   성도 한 사람 한 사람의 삶이 하나님 앞에서 가장 아름답게 열매맺는 일을 목적으로 살아가고 있습니다.
                 </p>
                 <p className='text-sm font-nanum mb-1 break-words'>
-                  예수님을 믿었지만, 목회가 무엇인지 잘 모르고 방황하는 시절에 사랑의교회 故 옥한흠 목사님을 통해 목회적 회심을 경험했고 한 영혼을 위해 목숨을 거는 제자훈련 목회를 철학으로 삼고 있습니다. 
+                  예수님을 믿었지만, 목회가 무엇인지 잘 모르고 방황하는 시절에 사랑의교회 故 옥한흠 목사님을 통해 목회적 회심을 경험했고 한 영혼을 위해 목숨을 거는 제자훈련 목회를 철학으로 삼고 있습니다.
                 </p>
                 <p className='text-sm font-nanum mb-1 break-words'>
                   또 오늘날 문화에 맞는 복음을 전하기를 꿈꾸며 리디머교회 팀 켈러 목사를 통해 복음의 가치를 재발견하고 복음과 제자훈련을 접목함으로써 복음적 훈련 공동체를 추구하고 있습니다.
@@ -157,7 +157,7 @@ function Photos() {
 function HowToCome() {
   return (
     <>
-     <div>오시는 길</div>
+      <div>오시는 길</div>
     </>
   )
 }
@@ -170,10 +170,10 @@ function Words() {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
       </SectionIntro>
-      
+
       <Container className="mt-16">
         <div className="font-ridi text-xl lg:flex lg:items-center lg:justify-end">
-            복음은 모든 것을 변화시킨다
+          복음은 모든 것을 변화시킨다
         </div>
       </Container>
     </>
@@ -249,9 +249,9 @@ function Services() {
       >
       </SectionIntro>
 
-      
+
       <Container className="mt-16">
-      
+
         <div className="lg:flex lg:items-center lg:justify-end">
           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
             <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
@@ -302,7 +302,7 @@ export default async function Home() {
             그 사랑교회에 오신 것을 환영합니다
           </h1>
           <p className="font-nanum mt-6 text-base text-zinc-600">
-          Gospel Changes Everything 복음을 모든 것을 변화시킵니다     
+            Gospel Changes Everything 복음을 모든 것을 변화시킵니다
           </p>
 
           <p className="font-nanum mt-6 text-base text-zinc-600">
@@ -343,7 +343,7 @@ export default async function Home() {
       {/* <Words /> */}
 
       <Example />
-      
+
       {/* <CaseStudies caseStudies={caseStudies} /> */}
 
       {/* <Testimonial
