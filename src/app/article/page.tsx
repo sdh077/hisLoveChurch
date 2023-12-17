@@ -31,7 +31,7 @@ function Article({
   articles: Array<IArticle>
 }) {
   return (
-    <Container className="mt-40">
+    <Container className="mt-20">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
           Article
@@ -53,11 +53,11 @@ function Article({
                       unoptimized
                     />
                   </div>
-                  
+
                 </div>
-                
+
                 <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
-                <div className="mt-1 mb-2 ml-1 flex gap-x-4 sm:mt-0 lg:block">
+                  <div className="mt-1 mb-2 ml-1 flex gap-x-4 sm:mt-0 lg:block">
                     <p className="font-nanum text-sm text-neutral-950 lg:mt-2">
                       <time dateTime={article.date}>
                         {formatDate(article.date)}
