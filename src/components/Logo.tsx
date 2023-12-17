@@ -58,7 +58,7 @@ export function Logo({
       <div
         className={invert ? 'text-white font-ridi' : 'text-neutral-950 font-ridi'}
       >
-        His Great Love Church
+        그 사랑교회
       </div>
     </div>
   )
