@@ -78,9 +78,9 @@ function Example() {
       <div className="bg-neutral-950 pb-20 sm:pb-24 xl:pb-0">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
           <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
-            <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
+            <div className="relative aspect-[1.6/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
               <img
-                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl object-[0_-74px] lg:object-[0_0]"
+                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl object-[0_-50px] lg:object-[0_0]"
                 src="/kosangsub4.png"
                 alt=""
               />
@@ -100,7 +100,7 @@ function Example() {
                 />
                 <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
               </svg>
-              <blockquote className="text-lg font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+              <blockquote className="text-lg leading-8 space-y-3 text-white sm:text-2xl sm:leading-9">
                 <p className='text-sm font-nanum mb-1 break-all'>
                   성도 한 사람 한 사람의 삶이 하나님 앞에서 가장 아름답게 열매맺는 일을 목적으로 살아가고 있습니다.
                 </p>
@@ -115,7 +115,7 @@ function Example() {
               <figcaption className="mt-8 text-base">
                 <span className="font-ridi font-semibold text-white">고상섭</span><span className="ml-2 font-ridi mt-1 text-gray-400">그 사랑교회 담임목사</span>
               </figcaption>
-              <ul className='ml-3 font-nanum text-xs text-gray-400 lg:text-sm'>
+              <ul className='ml-3 font-nanum text-xs space-y-1 text-gray-400 lg:text-sm lg:space-y-0'>
                 <li>영남신학대학교 및 합동신학대학원 졸업</li>
                 <li>사랑의교회 국제제자훈련원 교육자료개발 및 청년부 담당</li>
                 <li>CTCKorea 이사</li>
