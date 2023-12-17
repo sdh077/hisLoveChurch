@@ -6,8 +6,8 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '그사랑교회',
-    default: '그사랑교회',
+    template: '그 사랑교회',
+    default: '그 사랑교회',
   },
 }
 
