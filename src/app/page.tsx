@@ -31,6 +31,9 @@ import image4 from '@/images/swiper/main2.jpeg'
 import image5 from '@/images/swiper/pray1.jpeg'
 import image6 from '@/images/swiper/kosangsub2.jpeg'
 import image7 from '@/images/swiper/kosangsub3.jpeg'
+import NaverMap from '@/components/NaverMap'
+import { GridList, GridListItem } from '@/components/GridList'
+import { Button } from '@/components/Button'
 
 const clients = [
   ['Phobia', logoPhobiaLight],
@@ -157,7 +160,21 @@ function Photos() {
 function HowToCome() {
   return (
     <>
-      <div>오시는 길</div>
+      <Container className='mt-32'>
+        <GridList className='my-4'>
+          <GridListItem title="주소">
+            서울 강남구 영동대로 229 6층 D.LAB 어학원 <br />(자연드림 대치점 6층)
+          </GridListItem>
+          <GridListItem title="지도 이동">
+            <Link href={''} className='mx-2'><Button>네이버맵</Button></Link>
+            <Link href={''} className='mx-2'><Button>카카오맵</Button></Link>
+          </GridListItem>
+          <GridListItem title="문의">
+            ssgo1973@gmail.com
+          </GridListItem>
+        </GridList>
+        <NaverMap />
+      </Container>
     </>
   )
 }
