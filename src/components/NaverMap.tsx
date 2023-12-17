@@ -14,12 +14,16 @@ export default function page() {
         const mapOptions = {
             center: new window.naver.maps.LatLng(location),
             zoom: 17,
-            minZoom: 9,
+            minZoom: 17,
+            zoomControl: false,
             scaleControl: false,
             mapDataControl: false,
             logoControlOptions: {
                 position: naver.maps.Position.BOTTOM_LEFT,
             },
+            disableTwoFingerTapZoom: false,
+            draggable: false,
+            scrollWheel: false
         };
         const map = new window.naver.maps.Map('map', mapOptions);
         const marker = new naver.maps.Marker({
