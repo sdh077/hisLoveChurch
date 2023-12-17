@@ -37,11 +37,11 @@ function Article({
           Article
         </h2>
       </FadeIn>
-      <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
+      <div className="mt-10 space-y-14 sm:space-y-14 lg:space-y-14">
         {articles.map((article, index) => (
           <FadeIn key={article.link}>
             <article>
-              <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
+              <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-14">
                 <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
                   <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
                     <Image
@@ -49,23 +49,25 @@ function Article({
                       width={150}
                       height={80}
                       alt=""
-                      className="h-32 w-64 flex-none rounded-xl"
+                      className="h-auto w-full flex-none rounded-xl"
                       unoptimized
                     />
                   </div>
-                  <div className="mt-1 flex gap-x-4 sm:mt-0 lg:block">
-                    <p className="text-sm text-neutral-950 lg:mt-2">
+                  
+                </div>
+                
+                <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
+                <div className="mt-1 mb-2 ml-1 flex gap-x-4 sm:mt-0 lg:block">
+                    <p className="font-nanum text-sm text-neutral-950 lg:mt-2">
                       <time dateTime={article.date}>
                         {formatDate(article.date)}
                       </time>
                     </p>
                   </div>
-                </div>
-                <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
-                  <p className="font-display text-4xl font-medium text-neutral-950">
+                  <p className="font-display text-4xl font-medium text-neutral-950 font-nanum">
                     <Link href={`/article/${index}`}>{article.title}</Link>
                   </p>
-                  <div className="mt-6 space-y-6 text-base text-neutral-600">
+                  <div className="mt-6 space-y-6 text-base text-neutral-600 font-nanum">
                     <p >{article.quo_txt01}</p>
                   </div>
                 </div>
