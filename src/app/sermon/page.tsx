@@ -40,7 +40,7 @@ export default async function Blog({ searchParams: { page } }: { searchParams: {
             {data && data.map((article) => (
               <FadeIn key={article.id}>
                 <article>
-                  <Border className="pt-16">
+                  <Border className="py-16">
                     <div className="relative lg:-mx-4 lg:flex lg:justify-end">
                       <div className="pt-10 lg:w-2/3 lg:flex-none lg:px-4 lg:pt-0">
                         <h2 className="font-display text-2xl font-semibold text-neutral-950">

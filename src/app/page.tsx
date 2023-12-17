@@ -166,8 +166,8 @@ function HowToCome() {
             서울 강남구 영동대로 229 6층 D.LAB 어학원 <br />(자연드림 대치점 6층)
           </GridListItem>
           <GridListItem title="지도 이동">
-            <Link href={''} className='mx-2'><Button>네이버맵</Button></Link>
-            <Link href={''} className='mx-2'><Button>카카오맵</Button></Link>
+            <Link href={'https://naver.me/xb7spGZM'} target='_blank' className='mx-2'><Button>네이버맵</Button></Link>
+            <Link href={'https://kko.to/obXkaUg9rL'} target='_blank' className='mx-2'><Button>카카오맵</Button></Link>
           </GridListItem>
           <GridListItem title="문의">
             ssgo1973@gmail.com
