@@ -58,8 +58,8 @@ export default async function Blog({ searchParams: { page } }: { searchParams: {
                           </time>
                         </p>
                       </div>
-                      <p className="font-display text-4xl font-medium text-neutral-950 font-nanum">
-                        {article.description}
+                      <p className="font-display text-2xl font-medium text-neutral-950 font-nanum">
+                        {article.title}
                       </p>
                       <div className="mt-6 space-y-6 text-base text-neutral-600 font-nanum">
                         <Button
