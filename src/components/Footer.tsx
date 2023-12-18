@@ -118,7 +118,7 @@ export function Footer() {
           <Logo className="h-8" fillOnHover />
         </Link>
         <p className="text-sm text-neutral-700">
-          © Shin & Dong {new Date().getFullYear()}
+          © HisGreatLoveChurch {new Date().getFullYear()}
         </p>
       </div>
     </Container>

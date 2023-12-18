@@ -74,13 +74,13 @@ function Clients() {
 
 function Example() {
   return (
-    <div className="bg-white pb-16 pt-24 sm:pb-24 sm:pt-32 xl:pb-32">
-      <div className="bg-gray-900 pb-20 sm:pb-24 xl:pb-0">
+    <div className="bg-white pb-16 pt-32 mt-32 sm:pb-24 sm:pt-32 xl:pb-32">
+      <div className="bg-neutral-950 pb-20 sm:pb-24 xl:pb-0">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
           <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
-            <div className="relative aspect-[2/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
+            <div className="relative aspect-[1.6/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
               <img
-                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl object-[0_-65px] lg:object-[0_0]"
+                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl object-[0_-50px] lg:object-[0_0]"
                 src="/kosangsub4.png"
                 alt=""
               />
@@ -100,7 +100,7 @@ function Example() {
                 />
                 <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
               </svg>
-              <blockquote className="text-lg font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+              <blockquote className="text-lg leading-8 space-y-3 text-white sm:text-2xl sm:leading-9">
                 <p className='text-sm font-nanum mb-1 break-all'>
                   성도 한 사람 한 사람의 삶이 하나님 앞에서 가장 아름답게 열매맺는 일을 목적으로 살아가고 있습니다.
                 </p>
@@ -115,7 +115,7 @@ function Example() {
               <figcaption className="mt-8 text-base">
                 <span className="font-ridi font-semibold text-white">고상섭</span><span className="ml-2 font-ridi mt-1 text-gray-400">그 사랑교회 담임목사</span>
               </figcaption>
-              <ul className='ml-3 font-nanum text-xs text-gray-400 lg:text-sm'>
+              <ul className='ml-3 font-nanum text-xs space-y-1 text-gray-400 lg:text-sm lg:space-y-0'>
                 <li>영남신학대학교 및 합동신학대학원 졸업</li>
                 <li>사랑의교회 국제제자훈련원 교육자료개발 및 청년부 담당</li>
                 <li>CTCKorea 이사</li>
@@ -160,18 +160,23 @@ function Photos() {
 function HowToCome() {
   return (
     <>
-      <Container className='mt-32'>
-        <GridList className='my-4'>
-          <GridListItem title="주소">
-            서울 강남구 영동대로 229 6층 D.LAB 어학원 <br />(자연드림 대치점 6층)
+      <SectionIntro
+        title="오시는 길"
+        className="mt-24 sm:mt-32 lg:mt-40"
+      >
+      </SectionIntro>
+      <Container className='mt-5'>
+        <GridList className='my-4 gap-3'>
+          <GridListItem className='font-nanum' title="주소">
+            서울 강남구 영동대로 229 6층 D.LAB
           </GridListItem>
-          <GridListItem title="지도 이동">
-            <Link href='https://naver.me/xb7spGZM' target='_blank' className='mx-2'><Button>네이버맵</Button></Link>
-            <Link href='https://kko.to/obXkaUg9rL' target='_blank' className='mx-2'><Button>카카오맵</Button></Link>
+          <GridListItem className='font-nanum' title="지도 이동">
+            <Link href='https://naver.me/xb7spGZM' target='_blank' className='mx-2 font-nanum'><Button>네이버맵</Button></Link>
+            <Link href='https://kko.to/obXkaUg9rL' target='_blank' className='mx-2 font-nanum'><Button>카카오맵</Button></Link>
           </GridListItem>
-          <GridListItem title="문의">
+          {/* <GridListItem title="문의">
             ssgo1973@gmail.com
-          </GridListItem>
+          </GridListItem> */}
         </GridList>
         <NaverMap />
       </Container>
@@ -279,7 +284,7 @@ function Services() {
               />
             </FadeIn>
           </div>
-          <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
+          <List className="text-md mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="예배,전도">
               사람들을 하나님께 연결
             </ListItem>
@@ -315,19 +320,25 @@ export default async function Home() {
       {/* <Slide /> */}
       <Container className="mt-10">
         <div className="max-w-4xl">
-          <h1 className="font-ridi text-4xl break-keep font-bold tracking-tight text-zinc-800 sm:text-5xl">
+          <h1 className="mb-10 font-ridi text-4xl break-keep font-bold tracking-tight text-zinc-800 sm:text-5xl">
             그 사랑교회에 오신 것을 환영합니다
           </h1>
-          <p className="font-nanum mt-6 text-base text-zinc-600">
-            Gospel Changes Everything 복음을 모든 것을 변화시킵니다
-          </p>
 
           <p className="font-nanum mt-6 text-base text-zinc-600">
-            궁휼이 풍성하신 하나님이 우리를 사랑하신 <span className='text-red-800'>그 큰 사랑</span>을 인하여 허물로 죽은 우리를 그리스도와 함께 살리셨고 (너희는 은혜로 구원을 받은 것이라)(에베소서 2장 4-5절)
+            궁휼이 풍성하신 하나님이 우리를 사랑하신 <span className=' text-red-700'>그 큰 사랑</span>을 인하여 허물로 죽은 우리를 그리스도와 함께 살리셨고 (너희는 은혜로 구원을 받은 것이라)(에베소서 2장 4-5절)
           </p>
           <p className="font-nanum mt-6 text-base text-zinc-600">
-            But God, who is rich in mercy, for <span className='text-red-800'>his great love</span> wherewith he loved us, even when we were dead in sins, hath quickened us together with Christ, (by grace ye are saved;) (Epistle to the Ephesians 2:4-5)
+            But God, who is rich in mercy, for <span className='text-red-700'>his great love</span> wherewith he loved us, even when we were dead in sins, hath quickened us together with Christ, (by grace ye are saved;) (Epistle to the Ephesians 2:4-5)
           </p>
+
+          <p className="font-nanum mt-6 text-xl text-zinc-700">
+            복음을 모든 것을 변화시킵니다
+          </p>
+          {/* 
+          <p className="font-nanum mt-6 text-base text-zinc-600">
+            Gospel Changes Everything
+          </p> */}
+
           {/* <div className="mt-6 flex gap-6">
             <SocialLink
               href="https://twitter.com"
@@ -355,11 +366,14 @@ export default async function Home() {
 
       <Photos />
 
-      <Clients />
+
+      {/* 목사님 소개 */}
+      <Example />
+
 
       {/* <Words /> */}
 
-      <Example />
+
 
       {/* <CaseStudies caseStudies={caseStudies} /> */}
 
@@ -375,6 +389,10 @@ export default async function Home() {
       <Services />
 
       <HowToCome />
+
+      {/* 예배 시간 */}
+      <Clients />
+
 
       {/* <ContactSection /> */}
     </>
