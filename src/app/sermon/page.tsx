@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 }
 const getData = async (pageNo: number) => {
   const end = pageNo * pageSize - 1
-  return await supabase.from('archive').select().range(0, end)
+  return await supabase.from('archive').select().range(0, end).order('id', { ascending: false })
 }
 export default async function Blog({ searchParams: { page } }: { searchParams: { page: string } }) {
   const pageNo = Number(page ?? 1)
