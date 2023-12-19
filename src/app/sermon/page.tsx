@@ -12,11 +12,11 @@ import { formatDate } from '@/lib/formatDate'
 import { supabase } from '@/lib/api'
 import Pagination from './pagination'
 
-const pageSize = 10
+const pageSize = 5
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'Sermon',
   description:
-    'Stay up-to-date with the latest industry news as our marketing teams finds new ways to re-purpose old CSS tricks articles.',
+    '주일 설교 말씀',
 }
 const getData = async (pageNo: number) => {
   const end = pageNo * pageSize - 1
@@ -31,7 +31,7 @@ export default async function Blog({ searchParams: { page } }: { searchParams: {
         <Container className="mt-20">
           <FadeIn>
             <h2 className="font-display text-2xl font-semibold text-neutral-950">
-              Article
+              Sermon
             </h2>
           </FadeIn>
           <div className="mt-10 space-y-14 sm:space-y-14 lg:space-y-14">
@@ -44,7 +44,7 @@ export default async function Blog({ searchParams: { page } }: { searchParams: {
                         <img
                           alt=""
                           src={`https://i.ytimg.com/vi/${article.link}/hqdefault.jpg`}
-                          className="object-cover  sm:w-full lg:w-64"
+                          className="object-cover  sm:w-full lg:w-full"
                         />
                       </div>
 
@@ -81,9 +81,15 @@ export default async function Blog({ searchParams: { page } }: { searchParams: {
                 </article>
               </FadeIn>
             ))}
+            <div className="flex justify-center">
+              {((pageNo) * pageSize <= data.length) && <FadeIn>
+                <Pagination pageNo={Number(pageNo ?? 1)} />
+              </FadeIn>}
+            </div>
+
           </div>
         </Container>
-        <Container className="mt-24 sm:mt-32 lg:mt-40">
+        {/* <Container className="mt-24 sm:mt-32 lg:mt-40">
           <div className="space-y-24 lg:space-y-32">
             {data && data.map((article) => (
               <FadeIn key={article.id}>
@@ -139,7 +145,7 @@ export default async function Blog({ searchParams: { page } }: { searchParams: {
               <Pagination pageNo={Number(pageNo ?? 1)} />
             </FadeIn>}
           </div>
-        </Container>
+        </Container> */}
         <ContactSection />
       </>
     )
