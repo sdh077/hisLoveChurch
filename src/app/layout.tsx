@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     template: '그 사랑교회',
     default: '그 사랑교회',
   },
+  openGraph: {
+    images: '/favicon.ico'
+  }
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

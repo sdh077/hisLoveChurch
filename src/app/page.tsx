@@ -3,6 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 
+import Process from './process/page'
+
+import Hero from '@/components/Hero'
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
@@ -23,6 +26,7 @@ import imageLaptop from '@/images/laptop.jpg'
 import cross1 from '@/images/cross1.jpeg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 import Slide from '@/components/Slide'
+import MiddleHeader from '@/components/Middle'
 
 import image1 from '@/images/swiper/main_image_1.jpeg'
 import image2 from '@/images/swiper/main_image_2.jpeg'
@@ -72,6 +76,52 @@ function Clients() {
   )
 }
 
+function Welcome() {
+  return (
+    <Container className='mt-36'>
+      <div className='text-center font-ridi text-2xl lg:text-4xl'>
+        <span className='text-4xl'>그 사랑은</span><br className='lg:hidden' /> 예수 그리스도의 사랑을 말합니다.
+      </div>
+      <div className='mt-16 text-center font-nanum text-lg'>
+        <div>
+          긍휼이 풍성하신 하나님께서 <br className='lg:hidden' /> 우리를 사랑하신 ‘그 큰 사랑’을 인하여 <br className='lg:hidden' /> 허물로 죽은 우리를 살리셨습니다. <br className='lg:hidden' /><br className='lg:hidden' />
+        </div>
+        <div>
+          그 사랑교회는 그 큰 사랑을 기억하며, <br className='lg:hidden' />인간의 노력과 성취가 아닌<br className='lg:hidden' /> 오직 하나님의 긍휼로 인해 <br className='lg:hidden' />구원받은 백성임을 깨닫고, <br className='lg:hidden' /><br className='lg:hidden' />
+        </div>
+        <div>
+          그분의 은혜를 우리의 모든 삶 속에서 <br className='lg:hidden' /> 나타내기를 소원하며 기도합니다.
+        </div>
+      </div>
+
+    </Container>
+
+  )
+}
+
+function Middle() {
+  return (
+    <Container className='mt-10 mb-36'>
+      <div className='text-center font-nanum text-2xl lg:text-4xl'>
+        <span className='text-4xl'>그 사랑교회는</span>
+      </div>
+      <div className='text-center font-nanum text-xl'>
+        <div className='mt-2'>
+          <strong>복음</strong>으로 <strong>부름</strong>을 받고,
+        </div>
+        <div className='mt-2'>
+          또한 <strong>세상으로 보내심</strong>을 받은
+        </div>
+        <div className='mt-2'>
+          <strong>복음적 제자 공동체</strong>입니다.
+        </div>
+      </div>
+
+    </Container>
+
+  )
+}
+
 function Example() {
   return (
     <div className="bg-white pb-16 pt-32 mt-32 sm:pb-24 sm:pt-32 xl:pb-32">
@@ -80,7 +130,7 @@ function Example() {
           <div className="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
             <div className="relative aspect-[1.6/1] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
               <img
-                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl object-[0_-50px] lg:object-[0_0]"
+                className="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl object-[0_-50px] lg:object-[-50px_0]"
                 src="/kosangsub4.png"
                 alt=""
               />
@@ -102,14 +152,21 @@ function Example() {
               </svg>
               <blockquote className="text-lg leading-8 space-y-3 text-white sm:text-2xl sm:leading-9">
                 <p className='text-sm font-nanum mb-1 break-all'>
-                  성도 한 사람 한 사람의 삶이 하나님 앞에서 가장 아름답게 열매맺는 일을 목적으로 살아가고 있습니다.
+                  고상섭 목사는 복음을 통해 한 영혼이 그리스도의 제자가 되는 일을 삶의 목적으로 살아가고 있습니다.
                 </p>
                 <p className='text-sm font-nanum mb-1 break-all'>
-                  예수님을 믿었지만, 목회가 무엇인지 잘 모르고 방황하는 시절에 사랑의교회 故 옥한흠 목사님을 통해 목회적 회심을 경험했고 한 영혼을 위해 목숨을 거는 제자훈련 목회를 철학으로 삼고 있습니다.
+                  예수님을 믿었지만, 목회가 무엇인지 잘 모르고 방황하던 시절에 사랑의 교회 故 옥한흠 목사님을 통해 목회적 회심을 경험했고, 한 영혼을 위해 목숨을 거는 제자훈련을 목회철학으로 삼고 있습니다.
                 </p>
                 <p className='text-sm font-nanum mb-1 break-all'>
-                  또 오늘날 문화에 맞는 복음을 전하기를 꿈꾸며 리디머교회 팀 켈러 목사를 통해 복음의 가치를 재발견하고 복음과 제자훈련을 접목함으로써 복음적 훈련 공동체를 추구하고 있습니다.
+                  또 뉴욕의 리디머 교회 팀 켈러 목사님의 영향을 받아 복음의 가치를 재발견했습니다.
                 </p>
+                <p className='text-sm font-nanum mb-1 break-all'>
+                  그래서 현재, 복음과 훈련을 접목함으로써 건강한 복음적 훈련공동체를 통해 그리스도의 아름다움을 높이는 공동체를 사모하며 기도하고 있습니다.
+                </p>
+                <p className='text-sm font-nanum mb-1 break-all'>
+                  저서로는 "삶을 변화시키는 귀납적 큐티(넥서스Cross)", "목사가 목사에게(IVP)", "그리스도 중심적 성경읽기 1,2,3(IVP)", "팀 켈러를 읽는 중입니다(두란노)", "팀 켈러의 유산(다함)"이 있습니다.
+                </p>
+
 
               </blockquote>
               <figcaption className="mt-8 text-base">
@@ -317,59 +374,22 @@ export default async function Home() {
 
   return (
     <>
-      {/* <Slide /> */}
-      <Container className="mt-10">
-        <div className="max-w-4xl">
-          <h1 className="mb-10 font-ridi text-4xl break-keep font-bold tracking-tight text-zinc-800 sm:text-5xl">
-            그 사랑교회에 오신 것을 환영합니다
-          </h1>
+      {/*히어로 섹션*/}
+      <Hero />
 
-          <p className="font-nanum mt-6 text-base text-zinc-600">
-            궁휼이 풍성하신 하나님이 우리를 사랑하신 <span className=' text-red-700'>그 큰 사랑</span>을 인하여 허물로 죽은 우리를 그리스도와 함께 살리셨고 (너희는 은혜로 구원을 받은 것이라)(에베소서 2장 4-5절)
-          </p>
-          <p className="font-nanum mt-6 text-base text-zinc-600">
-            But God, who is rich in mercy, for <span className='text-red-700'>his great love</span> wherewith he loved us, even when we were dead in sins, hath quickened us together with Christ, (by grace ye are saved;) (Epistle to the Ephesians 2:4-5)
-          </p>
-
-          <p className="font-nanum mt-6 text-xl text-zinc-700">
-            복음을 모든 것을 변화시킵니다
-          </p>
-          {/* 
-          <p className="font-nanum mt-6 text-base text-zinc-600">
-            Gospel Changes Everything
-          </p> */}
-
-          {/* <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://instagram.com"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://linkedin.com"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
-          </div> */}
-        </div>
-      </Container>
-
-      <Photos />
-
+      {/* 웰컴 섹션 */}
+      <Welcome />
 
       {/* 목사님 소개 */}
       <Example />
 
+      <Middle />
+
+      {/* 이번주 설교 */}
+      <MiddleHeader />
+
+      {/* 4가지 교회소개 */}
+      <Process />
 
       {/* <Words /> */}
 
@@ -386,7 +406,7 @@ export default async function Home() {
         those annoying permission dialogs.
       </Testimonial> */}
 
-      <Services />
+      {/* <Services /> */}
 
       <HowToCome />
 
