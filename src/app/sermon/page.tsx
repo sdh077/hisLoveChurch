@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   description:
     '주일 설교 말씀',
 }
+export const revalidate = 0
 const getData = async (pageNo: number) => {
   const end = pageNo * pageSize - 1
   return await supabase.from('archive').select().range(0, end).order('id', { ascending: false })

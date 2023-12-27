@@ -116,11 +116,11 @@ function Header({
   )
 }
 
-function NavigationRow({ children }: { children: React.ReactNode }) {
+function NavigationRow({ children, col = 2 }: { children: React.ReactNode, col?: number }) {
   return (
     <div className="even:mt-px sm:bg-neutral-950">
       <Container>
-        <div className="grid grid-cols-1 sm:grid-cols-2">{children}</div>
+        <div className={`grid grid-cols-1 sm:grid-cols-${col}`}>{children}</div>
       </Container>
     </div>
   )
@@ -147,13 +147,13 @@ function NavigationItem({
 function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
-      <NavigationRow>
+      <NavigationRow col={1}>
         <NavigationItem href="/">Church</NavigationItem>
-        <NavigationItem href="/sermon">Sermon</NavigationItem>
       </NavigationRow>
       <NavigationRow>
+        <NavigationItem href="/sermon">Sermon</NavigationItem>
         <NavigationItem href="/article">Article</NavigationItem>
-        <NavigationItem href="/discipline">Discipline</NavigationItem>
+        {/* <NavigationItem href="/discipline">Discipline</NavigationItem> */}
       </NavigationRow>
     </nav>
   )
