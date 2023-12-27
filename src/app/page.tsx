@@ -172,11 +172,6 @@ function Example() {
               <figcaption className="mt-8 text-base">
                 <span className="font-ridi font-semibold text-white">고상섭</span><span className="ml-2 font-ridi mt-1 text-gray-400">그 사랑교회 담임목사</span>
               </figcaption>
-              <ul className='ml-3 font-nanum text-xs space-y-1 text-gray-400 lg:text-sm lg:space-y-0'>
-                <li>영남신학대학교 및 합동신학대학원 졸업</li>
-                <li>사랑의교회 국제제자훈련원 교육자료개발 및 청년부 담당</li>
-                <li>CTCKorea 이사</li>
-              </ul>
             </figure>
           </div>
         </div>
