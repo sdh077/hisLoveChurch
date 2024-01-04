@@ -230,7 +230,7 @@ function HowToCome() {
             ssgo1973@gmail.com
           </GridListItem> */}
         </GridList>
-        <NaverMap />
+        {/* <NaverMap /> */}
       </Container>
     </>
   )
