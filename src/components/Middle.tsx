@@ -26,22 +26,20 @@ const getData = async () => {
 export default async function MiddleHeader() {
     const { data, error } = await getData()
     const opts = {
-        height: '390',
-        width: '640',
+        height: '',
+        width: '',
         playerVars: {
             // https://developers.google.com/youtube/player_parameters
             autoplay: 0,
         },
     };
 
+    console.log(data![0].link)
+
 
     return (
         <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-24 sm:py-32 lg:px-8">
-            <img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
-                alt=""
-                className="absolute inset-0 -z-10 h-full w-full object-cover"
-            />
+
             <div
                 className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
                 aria-hidden="true"
@@ -66,27 +64,15 @@ export default async function MiddleHeader() {
                     }}
                 />
             </div>
-            <div className="mx-auto max-w-3xl text-center">
-                <h2 className="font-ridi text-4xl font-bold tracking-tight text-white sm:text-6xl">이번주 설교 말씀</h2>
-                <div className="border-y">
-                    <div className="-my-px mx-auto max-w-full min-h-full">
+            <div className="mx-auto max-w-8xl text-center">
+                <h2 className="font-ridi text-4xl font-bold tracking-tight text-white sm:text-6xl mb-5">이번주 설교 말씀</h2>
+                <div className="">
+                    <div className="aspect-video flex justify-center">
+
                         <YouTube
-                            videoId={data![0].link}                  // defaults -> ''
-                            // id={string}                       // defaults -> ''
-                            className=''                // defaults -> ''
-                            // iframeClassName={string}          // defaults -> ''
-                            // style={object}                    // defaults -> {}
-                            // title={string}                    // defaults -> ''
-                            // loading={string}                  // defaults -> undefined
-                            opts={opts}                        // defaults -> {}
-                        // onReady={func}                    // defaults -> noop
-                        // onPlay={func}                     // defaults -> noop
-                        // onPause={func}                    // defaults -> noop
-                        // onEnd={func}                      // defaults -> noop
-                        // onError={func}                    // defaults -> noop
-                        // onStateChange={func}              // defaults -> noop
-                        // onPlaybackRateChange={func}       // defaults -> noop
-                        // onPlaybackQualityChange={func}    // defaults -> noop
+                            videoId={data![0].link}
+                            className='aspect-video'
+                            opts={opts}
                         />
                     </div>
                 </div>
