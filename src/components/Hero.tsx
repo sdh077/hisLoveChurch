@@ -35,7 +35,7 @@ export default function Hero() {
                         }}
                     />
                 </div>
-                <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-48">
+                <div className="mx-auto max-w-6xl py-32 sm:py-48 lg:py-56">
 
                     <div className="text-center">
                         <div className="text-3xl font-bold tracking-tight text-white">
@@ -44,7 +44,6 @@ export default function Hero() {
                         <p className="mt-6 text-lg leading-8 text-gray-300">
                             에베소서 2:4-5
                         </p>
-
                     </div>
                 </div>
                 <div
