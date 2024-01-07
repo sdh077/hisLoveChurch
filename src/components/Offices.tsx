@@ -33,12 +33,12 @@ export function Offices({
     <ul role="list" {...props}>
       <li>
         <Office name="예배당" invert={invert}>
-        <div className='font-nanum'>서울 강남구 영동대로 229</div>
+          <div className='font-nanum'>서울 강남구 영동대로 229</div>
           <div className='font-nanum'>6층 DLAB(대치동 자연드림)</div>
         </Office>
       </li>
       <li>
-        <Office name="목사님 사무실" invert={invert}>
+        <Office name="교회 사무실" invert={invert}>
           <div className='font-nanum'>서울 서초구 강남대로 6길 28-11</div>
           <div className='font-nanum'>남석빌딩 3층</div>
         </Office>

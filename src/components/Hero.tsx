@@ -35,11 +35,11 @@ export default function Hero() {
                         }}
                     />
                 </div>
-                <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-56">
+                <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-48">
 
                     <div className="text-center">
                         <div className="text-3xl font-bold tracking-tight text-white">
-                            긍휼이 풍성하신 하나님이<br className='lg:hidden' /> 우리를 사랑하신 <span className='text-rose-600'>그 큰 사랑</span>을 인하여 <br className='lg:hidden' />허물로 죽은 우리를 <br /> 그리스도와 함께 살리셨고 <br className='lg:hidden' />그 은혜로 구원을 받은 것이라
+                            긍휼이 풍성하신 하나님이<br className='lg:hidden' /> 우리를 사랑하신 <br className='sm:hidden' /><span className='text-rose-600'>그 큰 사랑</span>을 인하여 <br className='lg:hidden' />허물로 죽은 우리를 <br /> 그리스도와 함께 살리셨고 <br className='lg:hidden' />그 은혜로 구원을 받은 것이라
                         </div>
                         <p className="mt-6 text-lg leading-8 text-gray-300">
                             에베소서 2:4-5
