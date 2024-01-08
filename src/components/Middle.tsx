@@ -1,14 +1,8 @@
 'use client'
 
-import { type Metadata } from 'next'
 import YouTube from 'react-youtube';
 
-import { ContactSection } from '@/components/ContactSection'
-import { Container } from '@/components/Container'
-import { PageIntro } from '@/components/PageIntro'
 import { supabase } from '@/lib/api'
-import VideoPlayer, { Sermon } from '@/components/VideoPlayer';
-import { PostgrestSingleResponse } from '@supabase/supabase-js';
 
 
 // const getData = async (id: string): Promise<PostgrestSingleResponse<Sermon[]>> => {
