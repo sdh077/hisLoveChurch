@@ -26,8 +26,8 @@ const getData = async () => {
 export default async function MiddleHeader() {
     const { data, error } = await getData()
     const opts = {
-        height: '',
-        width: '',
+        height: '100%',
+        width: '100%',
         playerVars: {
             // https://developers.google.com/youtube/player_parameters
             autoplay: 0,
@@ -66,16 +66,13 @@ export default async function MiddleHeader() {
             </div>
             <div className="mx-auto max-w-8xl text-center">
                 <h2 className="font-ridi text-4xl font-bold tracking-tight text-white sm:text-6xl mb-5">이번주 설교 말씀</h2>
-                <div className="">
-                    <div className="aspect-video flex justify-center">
-
-                        <YouTube
-                            videoId={data![0].link}
-                            className='aspect-video'
-                            opts={opts}
-                        />
-                    </div>
-                </div>
+            </div>
+            <div className="aspect-video max-w-6xl mx-auto">
+                <YouTube
+                    videoId={data![0].link}
+                    className='aspect-video'
+                    opts={opts}
+                />
             </div>
         </div>
     )

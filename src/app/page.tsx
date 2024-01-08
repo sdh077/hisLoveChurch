@@ -381,7 +381,7 @@ export default async function Home() {
       <Middle />
 
       {/* 이번주 설교 */}
-      {/* <MiddleHeader /> */}
+      <MiddleHeader />
 
       {/* 4가지 교회소개 */}
       <Process />
