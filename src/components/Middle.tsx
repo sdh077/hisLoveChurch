@@ -28,7 +28,7 @@ export default async function MiddleHeader() {
         },
     };
 
-    console.log(data![0].link)
+    // console.log(data![0].link)
 
 
     return (
