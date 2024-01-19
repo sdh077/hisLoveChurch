@@ -4,7 +4,8 @@ import VideoPlayerMain from './VideoPlayerMain';
 
 const getData = async () => {
     const end = 0
-    const youtube_list = await supabase.from('archive').select().range(0, end).order('id', { ascending: false })
+    const youtube_list = await supabase.from('archive').select().range(0, end).order('play_dt', { ascending: false })
+    console.log(youtube_list)
     return youtube_list || []
 }
 
