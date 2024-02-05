@@ -1,19 +1,11 @@
-'use client'
-
-import YouTube from 'react-youtube';
-
 import { supabase } from '@/lib/api'
+import VideoPlayerMain from './VideoPlayerMain';
 
-
-// const getData = async (id: string): Promise<PostgrestSingleResponse<Sermon[]>> => {
-//     return await supabase.from('archive').select().eq('id', id)
-// }
 
 const getData = async () => {
     const end = 0
-    const youtube_list = await supabase.from('archive').select().range(0, end).order('id', { ascending: false })
-    // console.log()
-    return youtube_list
+    const youtube_list = await supabase.from('archive').select().range(0, end).order('play_dt', { ascending: false })
+    return youtube_list || []
 }
 
 
@@ -27,8 +19,6 @@ export default async function MiddleHeader() {
             autoplay: 0,
         },
     };
-
-    // console.log(data![0].link)
 
 
     return (
@@ -62,11 +52,7 @@ export default async function MiddleHeader() {
                 <h2 className="font-ridi text-4xl font-bold tracking-tight text-white sm:text-6xl mb-5">이번주 설교 말씀</h2>
             </div>
             <div className="aspect-video max-w-6xl mx-auto">
-                <YouTube
-                    videoId={data![0].link}
-                    className='aspect-video'
-                    opts={opts}
-                />
+                {data && data.length && <VideoPlayerMain link={data[0].link} />}
             </div>
         </div>
     )
