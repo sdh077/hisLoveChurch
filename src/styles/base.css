@@ -1,0 +1,24 @@
+@tailwind base;
+
+@font-face {
+  font-family: 'Mona Sans';
+  font-weight: 200 900;
+  font-display: block;
+  font-style: normal;
+  font-stretch: 75% 125%;
+  src: url('../fonts/Mona-Sans.var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RIDIBatang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
