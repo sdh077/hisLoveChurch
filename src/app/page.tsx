@@ -71,7 +71,7 @@ function Clients() {
 function Welcome() {
   return (
     <Container className='mt-36'>
-      <div className='text-center font-ridi text-2xl lg:text-4xl'>
+      <div className='text-center  text-2xl lg:text-4xl'>
         <span className='text-4xl'>그 사랑은</span><br className='lg:hidden' /> 예수 그리스도의 사랑을 말합니다.
       </div>
       <div className='mt-16 text-center font-nanum text-lg'>
@@ -162,7 +162,7 @@ function Example() {
 
               </blockquote>
               <figcaption className="mt-8 text-base">
-                <span className="font-ridi font-semibold text-white">고상섭</span><span className="ml-2 font-ridi mt-1 text-gray-400">그 사랑교회 담임목사</span>
+                <span className="font-semibold text-white">고상섭</span><span className="ml-2 mt-1 text-gray-400">그 사랑교회 담임목사</span>
               </figcaption>
             </figure>
           </div>
@@ -232,15 +232,20 @@ function Words() {
   return (
     <>
       <SectionIntro
-        title="Gospel Changes Everything"
+        title="그 사랑교회 헌금계좌"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
       </SectionIntro>
-
-      <Container className="mt-16">
-        <div className="font-ridi text-xl lg:flex lg:items-center lg:justify-end">
-          복음은 모든 것을 변화시킨다
-        </div>
+      <Container className='mt-5'>
+        <GridList className='my-4 gap-3'>
+          <GridListItem className='font-nanum' title="신한은행">
+            100-033-001145
+          </GridListItem>
+          {/* <GridListItem title="문의">
+            ssgo1973@gmail.com
+          </GridListItem> */}
+        </GridList>
+        {/* <NaverMap /> */}
       </Container>
     </>
   )
@@ -396,7 +401,7 @@ export default async function Home() {
       {/* <Services /> */}
 
       <HowToCome />
-
+      <Words />
       {/* 예배 시간 */}
       <Clients />
 

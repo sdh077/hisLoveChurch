@@ -49,7 +49,7 @@ export default async function MiddleHeader() {
                 />
             </div>
             <div className="mx-auto max-w-8xl text-center">
-                <h2 className="font-ridi text-4xl font-bold tracking-tight text-white sm:text-6xl mb-5">이번주 설교 말씀</h2>
+                <h2 className=" text-4xl font-bold tracking-tight text-white sm:text-6xl mb-5">이번주 설교 말씀</h2>
             </div>
             <div className="aspect-video max-w-6xl mx-auto">
                 {data && data.length && <VideoPlayerMain link={data[0].link} />}
