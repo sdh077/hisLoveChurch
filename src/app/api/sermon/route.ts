@@ -14,5 +14,5 @@ export async function POST(request: Request) {
     const result = await supabase.from('archive').insert({ title, link })
     arr.push(result)
   }
-  // return Response.json(arr)
+  return Response.json(arr)
 }

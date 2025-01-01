@@ -147,8 +147,9 @@ function NavigationItem({
 function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
-      <NavigationRow col={1}>
+      <NavigationRow col={2}>
         <NavigationItem href="/">Church</NavigationItem>
+        <NavigationItem href="/bible">Bible</NavigationItem>
       </NavigationRow>
       <NavigationRow>
         <NavigationItem href="/sermon">Sermon</NavigationItem>

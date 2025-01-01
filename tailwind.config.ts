@@ -22,9 +22,9 @@ export default {
         '4xl': '2.5rem',
       },
       fontFamily: {
-        sans: ['Mona Sans', ...defaultTheme.fontFamily.sans],
+        sans: ['NanumSquareNeo-Variable', ...defaultTheme.fontFamily.sans],
         display: [
-          ['Mona Sans', ...defaultTheme.fontFamily.sans],
+          ['NanumSquareNeo-Variable', ...defaultTheme.fontFamily.sans],
           { fontVariationSettings: '"wdth" 125' },
         ],
         nanum: ['NanumSquareNeo-Variable'],
