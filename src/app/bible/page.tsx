@@ -2391,9 +2391,9 @@ const BibleList = ({ bible }: { bible: string }) => {
         :
         <div className='w-full'>
           <div className='text-xl '>{bibleDiction[name]} {page}</div>
-          {rangeFromString(절s).map(절 =>
+          {/* {rangeFromString(절s).map(절 =>
             <BibleInView key={절} 장={`${장}:${절}`} 절={bibleData[`${name}${장}:${절}`]} />
-          )}
+          )} */}
         </div>
       }
     </div>
