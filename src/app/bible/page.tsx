@@ -2383,10 +2383,10 @@ const BibleList = ({ bible }: { bible: string }) => {
       {!절s ?
         <>
           <div className='text-xl'>{bibleDiction[name]} {page}장</div>
-          {Object.entries(bibleJson).filter(([key, value]) => key.startsWith(`${name}${장}:`))
+          {/* {Object.entries(bibleJson).filter(([key, value]) => key.startsWith(`${name}${장}:`))
             .map(([장, 절]) =>
               <BibleInView key={장} 장={장} 절={절} />
-            )}
+            )} */}
         </>
         :
         <div className='w-full'>
