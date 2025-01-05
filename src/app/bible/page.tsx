@@ -2342,7 +2342,7 @@ const MainView = ({ select, month, day }: { select: string, month: number, day: 
     <>
       <span
         className={clsx(
-          ' block font-display tracking-tight [text-wrap:balance]',
+          ' block font-display tracking-tight',
         )}
       >
         <ViewBible bible={select === 'family' ? f1 : p1} />
@@ -2383,28 +2383,28 @@ const BibleList = ({ bible }: { bible: string }) => {
       {!절s ?
         <>
           <div className='text-xl'>{bibleDiction[name]} {page}장</div>
-          {/* {Object.entries(bibleJson).filter(([key, value]) => key.startsWith(`${name}${장}:`))
+          {Object.entries(bibleJson).filter(([key, value]) => key.startsWith(`${name}${장}:`))
             .map(([장, 절]) =>
               <BibleInView key={장} 장={장} 절={절} />
-            )} */}
+            )}
         </>
         :
-        <div className='w-full'>
+        <span className='w-full'>
           <div className='text-xl '>{bibleDiction[name]} {page}</div>
-          {/* {rangeFromString(절s).map(절 =>
+          {rangeFromString(절s).map(절 =>
             <BibleInView key={절} 장={`${장}:${절}`} 절={bibleData[`${name}${장}:${절}`]} />
-          )} */}
-        </div>
+          )}
+        </span>
       }
     </div>
   )
 }
 const BibleInView = ({ 장, 절 }: { 장: string, 절: string }) => {
+  const str = 장.replace(/[가-힣]/g, '').split(':')[1]
   return (
-    <div className='w-full flex gap-4 my-1'>
-      <div className='w-[80px]'>{장.replace(/[가-힣]/g, '')}</div>
-      <div className='break-keep w-full'>{절}</div>
-    </div>
+    <span className='w-full flex gap-4 my-1'>
+      <span className='w-full'> <sup className='mr-1'>{str}</sup>{절}</span>
+    </span>
   )
 }
 
