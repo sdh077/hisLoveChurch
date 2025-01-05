@@ -2319,7 +2319,7 @@ const page = () => {
     <Container className='my-12'>
       <div className='flex justify-between flex-col md:flex-row text-center md:text-left'>
         <div className='text-xl'>
-          맥체인 성경표 읽기
+          맥체인 성경읽기표
         </div>
         <div className='flex gap-4 items-center justify-center'>
           <button onClick={() => addDay(-1)} className='rounded-full border-[1px] px-3 py-2 text-xs'>&lt;</button>
