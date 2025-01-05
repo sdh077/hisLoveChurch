@@ -554,7 +554,7 @@ const macBible: BibleReadingPlan = {
       "레 2,레 3",
       "요 21",
       "잠 18",
-      "골로세서1"
+      "골 1"
     ]
   },
   "4": {
@@ -1422,7 +1422,7 @@ const macBible: BibleReadingPlan = {
       "삼상 13",
       "롬 11",
       "렘 50",
-      "시 28,29"
+      "시 28,시 29"
     ],
     "21": [
       "삼상 14",
@@ -2355,7 +2355,7 @@ const MainView = ({ select, month, day }: { select: string, month: number, day: 
 const ViewBible = ({ bible }: { bible: string }) => {
   const bibles = bible.split(',')
   return (
-    <div className='my-4'>
+    <div className='my-8'>
       {bibles.map(bible =>
         <div key={bible}>
           <BibleList bible={bible} />
@@ -2402,7 +2402,7 @@ const BibleList = ({ bible }: { bible: string }) => {
 const BibleInView = ({ 장, 절 }: { 장: string, 절: string }) => {
   const str = 장.replace(/[가-힣]/g, '').split(':')[1]
   return (
-    <span className='w-full flex gap-4 my-1'>
+    <span className='w-full flex gap-4 my-1 font-light'>
       <span className='w-full'> <sup className='mr-1'>{str}</sup>{절}</span>
     </span>
   )
