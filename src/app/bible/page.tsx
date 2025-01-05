@@ -203,7 +203,7 @@ const macBible: BibleReadingPlan = {
     "0": [
       "창 33",
       "막 4",
-      "스 9,10",
+      "스 9,스 10",
       "롬 4"
     ],
     "1": [
