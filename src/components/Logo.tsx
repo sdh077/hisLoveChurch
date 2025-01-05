@@ -1,5 +1,6 @@
 import { useId } from 'react'
 import clsx from 'clsx'
+import Image from 'next/image'
 
 export function Logomark({
   invert = false,
@@ -56,8 +57,9 @@ export function Logo({
       className={clsx(fillOnHover && 'group/logo', className)}
     >
       <div
-        className={invert ? 'text-white ' : 'text-neutral-950 '}
+        className={clsx(invert ? 'text-white ' : 'text-neutral-950 ', 'flex gap-4 items-center')}
       >
+        <Image src={'/logo.png'} alt='logo' width={50} height={50} />
         His Great Love Church
       </div>
     </div>
