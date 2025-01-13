@@ -61,8 +61,8 @@ function Header({
   let { logoHovered, setLogoHovered } = useContext(RootLayoutContext)!
 
   return (
-    <Container>
-      <div className="flex items-center justify-between">
+    <Container className='pb-16'>
+      <div className="flex items-center justify-between gap-8">
         <Link
           href="/"
           aria-label="Home"
@@ -80,7 +80,7 @@ function Header({
             filled={logoHovered}
           /> */}
           <Logo
-            className="h-8"
+            // className="h-8"
             invert={invert}
             filled={logoHovered}
           />
@@ -189,7 +189,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <header>
         <div
-          className="absolute left-0 right-0 top-2 z-40 pt-14"
+          className="absolute left-0 right-0 top-2 z-40 pt-8"
           aria-hidden={expanded ? 'true' : undefined}
           // @ts-ignore (https://github.com/facebook/react/issues/17157)
           inert={expanded ? '' : undefined}
@@ -218,7 +218,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
           inert={expanded ? undefined : ''}
         >
           <motion.div layout className="bg-neutral-800">
-            <div ref={navRef} className="bg-neutral-950 pb-16 pt-14">
+            <div ref={navRef} className="bg-neutral-950 pb-16 pt-8">
               <Header
                 invert
                 panelId={panelId}
@@ -262,7 +262,7 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
       <motion.div
         layout
         style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
-        className="relative flex flex-auto overflow-hidden bg-white pt-14"
+        className="relative flex flex-auto overflow-hidden bg-white pt-12"
       >
         <motion.div
           layout
