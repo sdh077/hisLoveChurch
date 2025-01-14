@@ -1,8 +1,11 @@
 'use client'
 import { Container } from '@/components/Container'
 import clsx from 'clsx'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import bibleJson from '@public/bible.json'
+import Cookies from 'js-cookie'
+
+const DEFAULT_FONT_SIZE = 16
 
 type BibleReadingPlan = {
   [month: string]: {
@@ -2303,7 +2306,22 @@ const bibleDiction: IBible = {
 
 const page = () => {
   const [select, setSelect] = useState('family')
+  const [isLoad, setLoad] = useState(false)
+  const [fontSize, setFontSize] = useState(DEFAULT_FONT_SIZE)
   const today = new Date()
+
+  useEffect(() => {
+    const savedFontSize = Cookies.get('fontSize')
+    if (savedFontSize) {
+      setFontSize(Number(savedFontSize))
+    }
+    setLoad(true)
+  }, [])
+  const changeFontSize = (sizeChange: number) => {
+    const newSize = fontSize + sizeChange
+    setFontSize(newSize)
+    Cookies.set('fontSize', newSize.toString())
+  }
 
   const [date, setDate] = useState(today)
 
@@ -2321,33 +2339,55 @@ const page = () => {
         <div className='text-xl'>
           맥체인 성경읽기표
         </div>
-        <div className='flex gap-4 items-center justify-center'>
-          <button onClick={() => addDay(-1)} className='rounded-full border-[1px] px-3 py-2 text-xs'>&lt;</button>
-          {month + 1}월 {day}일
-          <button onClick={() => addDay(1)} className='rounded-full border-[1px] px-3 py-2 text-xs'>&gt;</button>
+        <div className='flex gap-4'>
+          <div className='flex gap-4 items-center justify-center'>
+            <button onClick={() => addDay(-1)} className='rounded-full border-[1px] px-3 py-2 text-xs'>&lt;</button>
+            {month + 1}월 {day}일
+            <button onClick={() => addDay(1)} className='rounded-full border-[1px] px-3 py-2 text-xs'>&gt;</button>
+          </div>
+          <div className="flex justify-center gap-4 my-4">
+            <button
+              onClick={() => changeFontSize(-2)}
+              className="rounded-full border-[1px] px-3 py-2 text-xs"
+            >
+              A-
+            </button>
+            <button
+              onClick={() => changeFontSize(2)}
+              className="rounded-full border-[1px] px-3 py-2 text-xs"
+            >
+              A+
+            </button>
+          </div>
         </div>
       </div>
       <div className='grid grid-cols-2'>
         <div className={clsx('text-center cursor-pointer', select === 'family' ? 'underline pb-2' : '')} onClick={() => setSelect('family')}>가정</div>
         <div className={clsx('text-center cursor-pointer', select === 'person' ? 'underline' : '')} onClick={() => setSelect('person')}>개인</div>
       </div>
-      <MainView select={select} month={month} day={day} />
+      {isLoad && <MainView select={select} month={month} day={day} fontSize={fontSize} />}
     </Container>
   )
 }
-const MainView = ({ select, month, day }: { select: string, month: number, day: number }) => {
-  if (month === 1 && day === 29) return <div className='my-12'>윤년</div>
+const MainView = ({
+  select,
+  month,
+  day,
+  fontSize,
+}: {
+  select: string
+  month: number
+  day: number
+  fontSize: number
+}) => {
+  if (month === 1 && day === 29) return <div className="my-12">윤년</div>
   const [f1, f2, p1, p2] = macBible[(month + 1).toString()][(day - 1).toString()]
   return (
     <>
-      <span
-        className={clsx(
-          ' block font-display tracking-tight',
-        )}
-      >
+      <div style={{ fontSize: `${fontSize}px` }}>
         <ViewBible bible={select === 'family' ? f1 : p1} />
         <ViewBible bible={select === 'family' ? f2 : p2} />
-      </span>
+      </div>
     </>
   )
 }
@@ -2355,58 +2395,68 @@ const MainView = ({ select, month, day }: { select: string, month: number, day: 
 const ViewBible = ({ bible }: { bible: string }) => {
   const bibles = bible.split(',')
   return (
-    <div className='my-8'>
-      {bibles.map(bible =>
+    <div className="my-8">
+      {bibles.map((bible) => (
         <div key={bible}>
           <BibleList bible={bible} />
         </div>
-      )}
+      ))}
     </div>
-
   )
 }
 
-type BibleData = Record<string, string>;
+type BibleData = Record<string, string>
 const BibleList = ({ bible }: { bible: string }) => {
   const bibleData: BibleData = bibleJson as BibleData
   const [name, page] = bible.split(' ')
   const [장, 절s] = page.split(':')
   function rangeFromString(input: string) {
-    const [start, end] = input.split("~").map(Number);
+    const [start, end] = input.split('~').map(Number)
     if (isNaN(start) || isNaN(end) || start > end) {
-      throw new Error("Invalid input");
+      throw new Error('Invalid input')
     }
-    return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+    return Array.from({ length: end - start + 1 }, (_, i) => start + i)
   }
   return (
     <div>
-      {!절s ?
+      {!절s ? (
         <>
-          <div className='text-xl'>{bibleDiction[name]} {page}장</div>
-          {Object.entries(bibleJson).filter(([key, value]) => key.startsWith(`${name}${장}:`))
-            .map(([장, 절]) =>
+          <div className="text-xl">
+            {bibleDiction[name]} {page}장
+          </div>
+          {Object.entries(bibleJson)
+            .filter(([key]) => key.startsWith(`${name}${장}:`))
+            .map(([장, 절]) => (
               <BibleInView key={장} 장={장} 절={절} />
-            )}
+            ))}
         </>
-        :
-        <span className='w-full'>
-          <div className='text-xl '>{bibleDiction[name]} {page}</div>
-          {rangeFromString(절s).map(절 =>
-            <BibleInView key={절} 장={`${장}:${절}`} 절={bibleData[`${name}${장}:${절}`]} />
-          )}
+      ) : (
+        <span className="w-full">
+          <div className="text-xl ">
+            {bibleDiction[name]} {page}
+          </div>
+          {rangeFromString(절s).map((절) => (
+            <BibleInView
+              key={절}
+              장={`${장}:${절}`}
+              절={bibleData[`${name}${장}:${절}`]}
+            />
+          ))}
         </span>
-      }
+      )}
     </div>
   )
 }
-const BibleInView = ({ 장, 절 }: { 장: string, 절: string }) => {
+const BibleInView = ({ 장, 절 }: { 장: string; 절: string }) => {
   const str = 장.replace(/[가-힣]/g, '').split(':')[1]
   return (
-    <span className='w-full flex gap-4 my-1 font-light'>
-      <span className='w-full'> <sup className='mr-1'>{str}</sup>{절}</span>
+    <span className="w-full flex gap-4 my-1 font-light">
+      <span className="w-full">
+        <sup className="mr-1">{str}</sup>
+        {절}
+      </span>
     </span>
   )
 }
-
 
 export default page
